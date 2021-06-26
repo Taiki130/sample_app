@@ -1,0 +1,7 @@
+<% active_relationship = current_user.active_relationships.find_by(followed_id: @user.id)%>
+<%= form_with model: active_relationship, 
+              url: relationship_path(active_relationship), 
+              html: { method: :delete }, 
+              local: false do |f| %>
+  <%= f.submit "Unfollow", class: "btn" %>
+<% end %>
