@@ -15,9 +15,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2
     - name: Set up Ruby 2.7
-      uses: ruby/setup-ruby@v1.68.0
+    - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.0
         bundler-cache: true
