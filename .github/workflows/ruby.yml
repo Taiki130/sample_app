@@ -9,10 +9,13 @@ name: Ruby
 
 on:
   push:
+    branches:
+      - 'feature/*'
+      - master
     paths-ignore:
-      - README.m
+      - README.md
 jobs:
-  test:
+  minitest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
